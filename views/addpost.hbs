@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add post</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/addPostForm.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+<body>
+    <div class="backgroundImage"></div>
+    {{>navbar}}
+    <form action="/posts/addpost" method="post" class="form">
+
+        <label for="name"><h2 class="formSubHeading">Recepie Name: </h2></label>
+        <input type="text" placeholder="Recepie Name" name="name" id="name" class="inputText"><br><br>
+
+        <label for="imageUrl"><h2 class="formSubHeading">Image Url:</h2></label>
+        <input type="text" name="imageUrl" id="imageUrl" placeholder="recepie image link" class="inputText"><br><br>
+
+        <label for="cookName"><h2 class="formSubHeading">Your Name:</h2></label>
+        <input type="text" name="cookName" id="cookName" placeholder="your name" class="inputText"><br><br>
+        
+        <label for="desc"><h2 class="formSubHeading">Description:</h2></label><br>
+        <textarea type="text" placeholder="Description" name="description" id="desc" cols="40" rows="15" class="inputText"></textarea><br>
+
+
+        <h2 class="formSubHeading">select the type--</h2><br>
+        <div class="inputRadio">
+            <input type="radio" name="type" id="veg" value="veg">
+            <label for="veg">Veg</label>
+            <br>
+            <input type="radio" name="type" id="nonVeg" value="nonveg">
+            <label for="nonVeg">Non-Veg</label>
+        </div>
+
+
+        <h2 class="formSubHeading">Select the category--</h2><br>
+        <div class="inputRadio">
+            <input type="radio" name="category" id="drink" value="drink">
+            <label for="drink">drink</label>
+            <input type="radio" name="category" id="dessert" value="dessert">
+            <label for="dessert">dessert</label>
+            <input type="radio" name="category" id="breads" value="breads">
+            <label for="breads">Breads</label>
+            <input type="radio" name="category" id="snacks" value="snacks">
+            <label for="snacks">snacks</label>
+            <input type="radio" name="category" id="salads" value="salads">
+            <label for="salads">salads</label>
+            <input type="radio" name="category" id="soups" value="soups">
+            <label for="soups">soups</label>
+            <input type="radio" name="category" id="sabzi" value="sabzi">
+            <label for="sabzi">sabzi</label>
+        </div>
+
+        <div class="ingredients">
+        <label for="ingredients"><h2 class="formSubHeading">Ingredients--</h2></label>
+            <textarea name="ingredients" id="ingredients" cols="50" rows="20" placeholder="enter the ingredients required for the recepie" class="inputText"></textarea>
+        </div><br><br>
+
+        <div class="steps">
+            <label for="ingredients"><h2 class="formSubHeading">Steps--</h2></label>
+            <span class="stepsInfo">Write each step in a new line </span><br><br>
+            <textarea name="steps" id="steps" cols="100" rows="20" placeholder="enter the steps for the recepie" class="inputText"></textarea>
+        </div><br><br>
+        
+        <label for="servingSize"><h2 class="formSubHeading">Serving Size:</h2></label>
+        <input type="number" placeholder="servingSize" name="servingSize" id="servingSize" class="inputText"><br>
+
+        <label for="preparationTime"><h2 class="formSubHeading">Preparation Time(in minutes):</h2></label>
+        <input type="number" placeholder="Preparation Time" name="preparationTime" id="preparationTime" class="inputText"><br>
+
+        <input type="submit" value="post">
+    </form>
+
+    <script>
+        let addPost=document.getElementById('addPost');
+        console.log(addPost);
+        addPost.classList.add('currentLink');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Great+Vibes&display=swap');
+
+body{
+    width:100%;
+}
+
+.recepie{
+    margin:20px;
+    /* border-bottom:10x solid black; */
+    display:grid;
+    grid-template: 'header body body';
+    width:90%;
+    /* font-family: ; */
+    /* background: red; */
+    padding-bottom:15px;
+    border-bottom: 3px dashed rgba(135, 206, 250, 0.574);
+}
+
+.recepieImage{
+    width:300px;
+    padding:9px;
+    border:2px solid rgb(13, 162, 212);
+    margin:10px 0px;
+}
+
+.recepieHeader{
+    grid-area:header;
+    /* border:1px solid black; */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+
+.recepieHeader .description{
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+.recepieHeader .cookName,
+.recepieHeader .headerSubHeading{
+    font-size: 1.5em;
+    font-family: 'Caveat', cursive;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color:rgb(0, 166, 169);
+}
+
+.recepieHeader .headerSubHeading{
+    text-decoration: none;
+}
+
+.recepieHeader span{
+    font-family: 'Caveat', cursive;
+    display:block;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.title,
+.heading{
+    font-family: 'Great Vibes', cursive;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color:rgb(0, 166, 169);
+}
+
+.title{
+    font-size: 2.5rem;
+}
+
+.heading{
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.recepieBody{
+    grid-area:body;
+    border-left:3px dashed rgba(135, 206, 250, 0.574);
+    padding-left:20px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.7em;
+    padding-top:40px;
+    padding-left:30px;
+    position: relative;
+}
+
+.recepieBody ul{
+    list-style-type: lower-roman;
+    list-style-position: inside;
+}
+
+.recepieBody .ingredients{
+    list-style-type: none;
+    display:flex;
+    gap:10px;
+    margin:10px 0px;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.recepieBody .ingredients .ingredient{
+    border:1px solid lightskyblue;
+    /* padding:3px; */
+    border-radius: 5px;
+    color:rgb(13, 162, 212);
+    padding:3px 10px;
+}
+
+
+.updateLink{
+    text-decoration: none;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
+button{
+    border:2px solid lightskyblue;
+    background-color: white;
+    border-radius: 10px;
+    padding:8px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color:lightskyblue;
+    transition:all 0.4s;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+button:hover{
+    color:white;
+    background-color: lightskyblue;
+    border-color:paleturquoise;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.commentsDiv{
+    margin:20px;
+    display:flex;
+    flex-wrap: wrap;
+    gap:40px
+}
+
+
+
+
+.form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:300px;
+    gap:10px;
+    margin-bottom:20px;
+    margin-top:20px;
+    padding-bottom:20px;
+    padding-top:20px;
+    border:5px dashed lightskyblue;
+    color:lightseagreen;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.inputText{
+    padding:10px;
+    border-radius: 10px;
+    outline:none;
+    background:transparent ;
+    border:3px solid lightskyblue;
+    color:rgb(9, 170, 224);
+    width:90%;
+    font-weight: bold;
+}
+
+.inputText::placeholder{
+    color:rgb(9, 170, 224);
+    font-weight: bold;
+}
+.inputText::-ms-input-placeholder { /* Microsoft Edge */
+    color:rgb(9, 170, 224);
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    border:2px solid lightskyblue;
+    background-color: transparent;
+    border-radius: 10px;
+    padding:8px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color:lightskyblue;
+    transition:all 0.4s;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+input[type='submit']:hover{
+    color:white;
+    background-color: lightskyblue;
+    border-color:paleturquoise;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.comments{
+    display:flex;
+    /* flex-direction: column; */
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.commentsDisplay h1{
+    padding-bottom:10px;
+}
+
+.comment{
+    border-bottom:3px dashed rgba(135, 206, 250, 0.574);
+    width:300px;
+    padding:10px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap:10px;
+}
+
+.commentHeading{
+    font-family: 'Caveat', cursive;
+    text-transform: capitalize;
+    color:rgb(1, 117, 119);
+    font-size: 1.5em;
+}
+
+.commentText{
+    font-family: 'Caveat', cursive;
+    color:rgb(3, 59, 78);
+    font-size: 1.4em;
+}
+
+.commentId{
+    display:none;
+}
+
+.commentButtons{
+    display:flex;
+    gap:5px;
+}

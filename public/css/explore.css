@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Great+Vibes&display=swap');
+
+.recepieCards{
+    margin:20px 0px;
+    width:95%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.recepieCard{
+    border:3px solid lightskyblue;
+    /* min-width:300px; */
+    width:350px;
+    border-radius: 10px;
+    padding:10px;
+    /* max-height:500px; */
+    /* overflow:scroll; */
+    line-height: 2rem;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity:0.8;
+    transition: opacity 0.5s,transform 0.5s;
+}
+
+.recepieCard:hover{
+    opacity:1;
+    transform: scale(1.03);
+}
+
+
+.recepieCard h2{
+    text-transform: capitalize;
+    font-family:'Times New Roman', Times, serif;
+    padding:5px 0px;
+    color:rgb(41, 173, 226);
+    text-align: center;
+    text-decoration: underline;
+    font-family:cursive;
+}
+
+.recepieCard .description{
+    font-style: italic;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.1rem;
+}
+
+.recepieCard img{
+    width:100%;
+    border-radius: 10px;
+}
+
+.recepieCard a{
+    text-decoration: none;
+}
+
+.recepieCard button{
+    border:2px solid lightskyblue;
+    background-color: white;
+    border-radius: 10px;
+    padding:8px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color:lightskyblue;
+    transition:all 0.4s;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+
+.recepieCard button i{
+    margin-left:2px;
+    transform: translateX(0);
+    transition:transform 0.4s;
+}
+
+.recepieCard button:hover{
+    color:white;
+    background-color: lightskyblue;
+    border-color:paleturquoise;
+    cursor:pointer;
+}
+
+.recepieCard button:hover i{
+    transform: translateX(4px);
+}
+
+.recepieCard .cardButtons{
+    display:flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

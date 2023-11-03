@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepie:{{data.name}}</title>
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/singlePost.css">
+</head>
+<body>
+    {{>navbar}}
+    <div class="recepie">
+
+        <div class="recepieHeader">
+
+            <h1 class="title">{{data.name}}</h1>
+            <h4 class="cookName">{{data.cookName}}</h4>
+            <img src="{{data.imageUrl}}" alt="{{data.name}} image" class="recepieImage">
+            <p class="description">{{data.description}}</p>
+            <span class="recepieType headerSubHeading">Type:</span><span>{{data.type}}</span>
+            <span class="recepieCategory headerSubHeading">Category:</span><span>{{data.category}}</span>
+
+        </div>
+        
+        {{!-- {{data._id}} --}}
+
+
+        <div class="recepieBody">
+
+            <h2 class="heading">Ingredients</h2>
+            <ul class="ingredients">
+                {{#each data.ingredients}}
+                <li class="ingredient">{{this}}</li>
+                {{/each}}
+            </ul>
+
+
+            <h3 class="heading">Steps</h3>
+            <ul class="steps">
+                {{#each data.steps}}
+                <li class="step">{{this}}</li>
+                {{/each}}
+            </ul>
+
+            <h3 class="heading">Serving Size</h3>
+            {{data.servingSize}} Person
+
+            <h3 class="heading">Preparation Time</h3>
+            {{data.preparationTime}} min
+            <br>
+
+            <h4 class="recepieInfo likes heading" style="display:inline">Likes</h4>
+            {{data.likes}}
+
+            <a href="/posts/updatepost?_id={{data._id}}" class="updateLink"><button>update</button></a>
+        </div>     
+
+    </div>
+
+    <div class="commentsDiv">
+
+        <div class="addComments">
+            <h1 class="heading">Add A Comment</h1>
+            <form action="/comment/addcomment" method="post" id="commentForm" class="form">
+                <input type="hidden" name="id" value="{{data._id}}" id="recepieId" class="inputText">
+                <input type="text" name="name" id="name" placeholder="enter your name" class="inputText">
+                <textarea name="comment" id="comment" placeholder="enter your comment" class="inputText" rows="20"></textarea>
+                <input type="submit" value="add comment">
+            </form>
+        </div>
+
+        <div class="commentsDisplay">
+            <h1 class="heading">Comments</h1>
+
+
+            <div class="comments" id="comments">
+
+                {{!-- <div class="comment">
+                    <div class="commentBody">
+                        <h3 class="commentHeading">Sample Name</h3>
+                        <p class="commentText">Here comes your comment</p>
+                        <p class="commentId">Comment Id</p>
+                    </div>
+                    <div class="commentButtons">
+                        <button class="buttons upvote commentButton">Upvote</button>
+                        <button class="buttons downvote commentButton">Downvote</button>
+                    </div>
+                </div> --}}
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../js/singlePost.js"></script>
+
+</body>
+</html>

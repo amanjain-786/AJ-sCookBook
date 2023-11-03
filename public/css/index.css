@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Great+Vibes&display=swap');
+
+.navbar{
+    position: fixed;
+    z-index: 101;
+    top:0;
+    /* left:0; */
+    width:100%;
+    background-color: rgba(73, 184, 253, 0.632);
+    transition:background-color 0.5s;
+}
+
+.addition{
+    background-color: rgba(73, 184, 253, 1);
+}
+
+
+.item{
+    height:100vh;
+    width:100%;
+}
+
+.item1{
+    background-image: url('../images/addPostBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:rgba(255, 255, 255, 0.83);
+    display:flex;
+    align-items:stretch;
+    justify-content: flex-start;
+    padding:50px;
+    box-sizing: border-box;
+}
+
+.changingText{
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top:50px;
+    text-transform: capitalize;
+}
+
+.changingText .text{
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color:rgb(48, 226, 250);
+    color:rgba(255, 255, 255, 0.554);
+}
+
+.changingText .changeText{
+    display:block;
+    /* padding-right:20px; */
+    /* padding-left:20px; */
+    overflow:hidden;
+    border-right:5px solid white;
+    /* border-radius:10px; */
+    /* border-left:3px solid white; */
+    animation: blinking_cursor 1.3s ease 0s infinite forwards normal,width_change 5s steps(8) 0s infinite forwards normal;
+    max-height: min-content;
+    /* width:0px; */
+    /* transform: scale(0.8); */
+    font-size: 3.5rem;
+}
+
+
+@keyframes blinking_cursor {
+    0%{
+        border-color: transparent;
+    }
+    50%{
+        border-color: white;
+    }
+    100%{
+        border-color: transparent;
+    }
+}
+
+@keyframes width_change {
+    0%{
+        width:0px;
+    }
+    45%{
+        width:250px;
+    }
+    55%{
+        width:250px;
+    }
+    95%{
+        width:0px;
+    }
+    100%{
+        width:0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cards{
+    padding-top:40px;
+    /* padding-top:30px; */
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    height: auto;
+    min-height: 100vh;
+    justify-content: space-around;
+    /* padding:0px 10px; */
+    color:white;
+    /* background: linear-gradient(to bottom,rgb(157, 212, 247),transparent); */
+    background: url('../images/indexItem2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+}
+
+.cards h1{
+    width:100%;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.8em;
+    text-decoration: underline;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:rgba(48, 226, 250, 0.764);
+    font-weight: bolder;
+    /* color:transparent; */
+
+}
+
+.cards .card{
+    height:400px;
+    width:300px;
+    border:3px solid rgb(71, 182, 251);
+    border-radius: 10px;
+    top:0;
+    position:relative;
+    transition:transform 0.3s;
+}
+
+.cardLink{
+    color:white;
+    text-decoration: none;
+}
+.cardLink::after{
+    color:white;
+    text-decoration: none;
+}
+.cardBackground{
+    content:"";
+    position: absolute;
+    background-color:rgba(135, 206, 250, 0.146);
+    z-index: 0;
+    width:300px;
+    height:400px;
+    top:0;
+    left:0;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardBackground img{
+    width:99%;
+    border-radius: 10px;
+}
+
+.cardBody{
+    z-index: 1;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    height:100%;
+    /* padding:20px 0px; */
+    text-align: center;
+    /* box-sizing: border-box; */
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.3em;
+}
+
+.cardBody h2{
+    text-decoration: underline;
+    text-transform:capitalize ;
+    font-family: 'Great Vibes', cursive;
+    padding-top:20px;
+    color:transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:rgba(48, 226, 250, 0.764);
+    font-size: 1.6em;
+}
+
+.cardBody span{
+    transition:0.3s;
+}
+
+.card:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+}
+
+.card:hover .cardBody span{
+    text-decoration: underline;
+}

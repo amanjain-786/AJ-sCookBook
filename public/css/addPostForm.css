@@ -1,0 +1,102 @@
+body{
+    background: url('../images/indexItem2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border:1px solid black; */
+    width:80%;
+    /* margin:20px 0px; */
+    margin:auto;
+    gap:10px;
+    margin-bottom:20px;
+    margin-top:20px;
+    padding-bottom:20px;
+    padding-top:20px;
+
+    /* border-right:5px dashed lightskyblue; */
+    /* border-left:5px dashed lightskyblue; */
+    border:5px dashed lightskyblue;
+    color:lightseagreen;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+
+    /* background:linear-gradient(135deg,rgba(176, 196, 222, 0.077),white); */
+    /* color:lightsteelblue */
+}
+
+.form h2{
+    text-transform: capitalize;
+    color:rgb(0, 157, 149);
+    text-shadow: 0px 0px black;
+}
+
+.inputRadio{
+    display:flex;
+    flex-direction: row;
+    column-gap: 10px;
+    text-transform: capitalize;
+}
+
+.inputRadio label{
+    transition: color 0.2s,font-size 0.2s;
+}
+
+.inputRadio input:checked + label{
+    color:white;
+    font-size: 1.05em;
+}
+
+.inputText{
+    padding:10px;
+    border-radius: 10px;
+    outline:none;
+    background:transparent ;
+    border:3px solid lightskyblue;
+    color:rgb(9, 170, 224);
+    transition: border 0.2s;
+}
+
+.inputText:focus{
+    border:3px dashed white;
+    border-style:double;
+}
+
+.inputText::placeholder{
+    color:rgb(9, 170, 224);
+    font-weight: bold;
+}
+.inputText::-ms-input-placeholder { /* Microsoft Edge */
+    color:rgb(9, 170, 224);
+    font-weight: bold;
+}
+
+
+input[type="submit"]{
+    border:2px solid lightskyblue;
+    background-color: transparent;
+    border-radius: 10px;
+    padding:8px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color:lightskyblue;
+    transition:all 0.4s;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+input[type='submit']:hover{
+    color:white;
+    background-color: lightskyblue;
+    border-color:paleturquoise;
+    cursor:pointer;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/explore.css">
+</head>
+<body>
+    {{>navbar}}
+    <div class="recepieCards" id="recepieCards">
+        {{#each data}}
+        <div class="recepieCard">
+
+            <div class="cardContent">
+                <h2>{{name}}</h2>
+                <img src="{{imageUrl}}" alt="image of the dish">
+                <p class="description">{{description}}</p>
+                <span class="preparationTime">Time:{{preparationTime}} min</span><br>
+            </div>
+
+            <div class="cardInfo">
+                <span class="likes">Likes:{{likes}}</span>
+            </div>
+
+            <div class="cardButtons">
+                <a href="/posts/getpost?_id={{_id}}"><button>explore<i class="fa-solid fa-arrow-right-long"></i></button></a>
+                <button class="delete" data-id="{{_id}}">delete</button>
+                <a href="/posts/updatepost?_id={{_id}}"><button>update</button></a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <script src="https://kit.fontawesome.com/77a9a736d4.js" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../../js/explore.js"></script>
+</body>
+</html>
